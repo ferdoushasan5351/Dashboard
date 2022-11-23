@@ -1,0 +1,61 @@
+.header-wrap{
+    width: 100%;
+    .inner{
+        @include flexBox(space-between)
+    }
+}
+.header-txt{
+    width: auto;
+    h1{
+        font-size: 1.75rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: .1875rem;
+    }
+    span{
+        font-size: 0.875rem;
+        font-weight: $bold;
+        color: $light-text;
+    }
+}
+.toggle-side{
+    width: 135px;
+    @include flexBox(space-around);
+        label{
+            color: #868cac;
+            font-size: .875rem;
+            font-weight: $bold;
+        }
+        input[type="checkbox"]{
+            position: relative;
+            width: 48px;
+            height: 24px;
+            -webkit-appearance: none;
+            background: $input-bg;
+            border-radius: 20px;
+            transition: 0.4s;
+            cursor: pointer;
+            &:checked{
+                background: $cheked-bg;
+            }
+            &::after{
+                position: absolute;
+                content: "";
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background: $white;
+                right: 3px;
+                top: 50%;
+                transition: all 0.3s linear;
+                transform: translateY(-50%);
+            }
+            &:checked::after{
+                width: 14px;
+                height: 14px;
+                border: 2px solid $white;
+                background: $black;
+                right: 27px;
+            }
+        }
+}

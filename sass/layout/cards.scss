@@ -1,0 +1,117 @@
+.cards-wrap{
+    width: 100%;
+    .inner{
+        padding-top: 45px;
+        h3{
+            padding-bottom: 30px;
+        }
+    }
+}
+.card-item-wrap{
+    @include flexBox(space-between);
+    row-gap: 30px;
+}
+.card-item{
+    width: 23%;
+    background: $normal-card;
+    border-radius: 10px;
+    padding: 25px;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.15s;
+    &:hover{
+        background: $normal-card-hover;
+    }
+}
+.card-icon{
+    @include flexBox(center);
+    column-gap: 7px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.card-facebook{
+    .fa-brands{
+        @include awesome($fb-color)
+    }
+    .card-top{
+        @include cardTop($fb-color);
+    }
+}
+.card-twitter{
+    .fa-brands{
+        @include awesome($twitter-color)
+    }
+    .card-top{
+        @include cardTop($twitter-color);
+    }
+}
+.card-insta{
+    .fa-brands{
+        background: -webkit-linear-gradient(90deg, rgba(252,192,105,1) 0%, rgba(226,85,145,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 25px
+    }
+    .card-top{     
+        @include cardTop($insta-color);
+    }
+}
+.card-youtube{
+    .fa-brands{
+        @include awesome($youtube-color);
+    }
+    .card-top{
+        @include cardTop($youtube-color);
+    }
+}
+.card-count{
+    text-align: center;
+    font-size: 56px;
+    font-weight: 700;
+    margin-top: 28px;
+    letter-spacing: 2px;
+}
+.card-label{
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 14px;
+    color: $light-text;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+.card-change{
+    @include flexBox(center);
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    color: $arrow-green;
+}
+.card-down{
+    color: $arrow-red;
+}
+
+//////////2nd////////
+
+.overview{
+    @include flexBox(space-between);
+    .card-subtitle{
+        font-size: 15px;
+        font-weight: 700;
+        color: $light-text;
+    }
+}
+.overview-gap{
+    margin-top: 20px;
+    .card-count-sm{
+        font-size: 32px;
+        font-weight: 700;
+    }
+}
+.attribution{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 11px;
+    color: $light-text;
+}

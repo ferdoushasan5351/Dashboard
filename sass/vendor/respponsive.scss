@@ -1,0 +1,22 @@
+@media only screen and (max-width: 767px){
+    .header-txt{
+        h1{
+            font-size: 1.25rem;
+        }
+    }
+    .card-item{
+        width: 49%;
+    }
+
+
+}
+@media only screen and (max-width: 563px){
+    .toggle-side{
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width: 410px){
+    .card-item{
+        width: 100%;
+    }
+}

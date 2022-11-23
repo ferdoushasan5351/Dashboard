@@ -1,0 +1,11 @@
+.darkmode-enable{
+    background: $dark-bg;
+    color: $white;
+    .card-item{
+        background: $dark-card;
+        transition: 0.3s;
+        &:hover{
+            background: $dark-card-hover;
+        }
+    }
+}
